@@ -5,17 +5,41 @@
 
   var currentUser = 0;
   var currentRoll = 3;
+  var frozen = 0;    //this is how many dice are frozen
+  var numDice;    //the number of dice we have
 
   function init(){
     $('#add').click(add);
     $('.arrow').click(arrow);
     $('body').keydown(move);
     $('#add-score').click(score);
+    $('#roll').click(roll);
+    $('.dice').click(freeze);
+
+    numDice = $('.dice').length;
+    frozen = $('.frozen').length;    //we are counting up the number of dice with class 'frozen'
+  }
+
+  function freeze(){
+    $(this).toggleClass('frozen');
+  }
+
+  function roll(){
+    var $dice = $('.dice:not(.frozen)');
+    var count = $dice.length;
+
+    for(var i = 0; i < count; i++){
+      var num = Math.floor(Math.random()* 6) + 1;
+      var dice = $dice[i];  //
+      $(dice).attr('src', './media/dice-' + num + '.png');
+
+    }
+
   }
 
   function score(event){
     var addScore = $('#score').val();
-    $('.horizontal .vertical').text(addScore);   //selects the thing with both classes .horizontal and .vertical
+    $('.horizontal .vertical').text(addScore);   //selects the element with both classes .horizontal and .vertical
 
     event.preventDefault();
   }

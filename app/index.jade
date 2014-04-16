@@ -3,7 +3,7 @@ html(lang='en')
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    title Pure Template
+    title Yahtzee
     link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.5.0-rc-1/pure-min.css')
     link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.5.0-rc-1/grids-responsive-min.css')
     link(rel='stylesheet', href='./css/app.css')
@@ -30,10 +30,21 @@ html(lang='en')
 
     .pure-g
       .pure-u-1
-        img.arrow#up(src='media/uparrow.png')
-        img.arrow#down(src='media/downarrow.png')
-        img.arrow#left(src='media/leftarrow.png')
-        img.arrow#right(src='media/rightarrow.png')
+        img.arrow#up(src='./media/uparrow.png')
+        img.arrow#down(src='./media/downarrow.png')
+        img.arrow#left(src='./media/leftarrow.png')
+        img.arrow#right(src='./media/rightarrow.png')
+
+    .pure-g
+      .pure-u-1-2
+        #dice
+          img.dice(src='./media/dice-1.png')
+          img.dice(src='./media/dice-2.png')
+          img.dice(src='./media/dice-3.png')
+          img.dice(src='./media/dice-4.png')
+          img.dice(src='./media/dice-5.png')
+      .pure-u-1-2
+          button.pure-button.pure-button-success#roll Roll
 
     .pure-g
       .pure-u-1
