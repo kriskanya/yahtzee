@@ -1,0 +1,63 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+body {
+  background-size: cover;
+  background-attachment: fixed;
+}
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: 'Open Sans', sans-serif;
+}
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.button-success {
+  background: #52e365;
+}
+.button-error {
+  background: #d2734e;
+}
+.button-warning {
+  background: #df7514;
+}
+.button-secondary {
+  background: rgba(108, 67, 223, 0.55);
+}
+.button-xsmall {
+  font-size: 50%;
+}
+.button-small {
+  font-size: 85%;
+}
+.button-large {
+  font-size: 110%;
+}
+.button-xlarge {
+  font-size: 150%;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+}
+.horizontal {
+  background-color: #f9f69d !important;
+}
+.vertical {
+  background-color: #e8b274 !important;
+}
+.dice {
+  width: 50px;
+  height: 50px;
+}
+.frozen {
+  opacity: .5;
+}
